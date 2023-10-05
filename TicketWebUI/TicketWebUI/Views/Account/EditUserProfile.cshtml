@@ -1,0 +1,97 @@
+﻿@model EditUserProfile
+
+<div class="container">
+    <h1>Edit Profile</h1>
+    <hr>
+    <div class="row">
+      
+
+        <!-- edit form column -->
+        <div class="col-md-9 personal-info">
+            
+            <h3>User Profile</h3>
+
+            <form asp-controller="Admin" asp-action="UserEdit" method="POST">
+                
+                <div class="form-group row">
+                    <input type="hidden" name="Id" value="@Model.Id"></input>
+                    <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input class="form-control" asp-for="Name">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="SurName" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input class="form-control" asp-for="SurName">
+                        <span asp-validation-for="SurName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input class="form-control" asp-for="Email">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                  <div class="form-group row">
+                    <label asp-for="PhoneNumber" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input class="form-control" asp-for="PhoneNumber">
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="UserName" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input class="form-control" asp-for="UserName">
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                </div>
+              
+                <body>
+                    <p>
+                        <select id="country" onchange="update()">
+                            <option selected="selected">Select Country</option>
+                            <option value="1">Albania</option>
+                            <option value="2">Kosovo</option>
+                            <option value="3">Germany</option>
+                        </select>
+                    </p>
+                    <p>
+                        <select id="city">
+                            <option selected="selected">Select City</option>
+                        </select>
+                    </p>
+                    <script type="text/javascript">
+                        function update() {
+                            var albania = ["Tirana", "Durres", "Vlore", "Shkoder"];
+                            var kosovo = ["Prishtina", "Mitrovica", "Peje", "Gjakove"];
+                            var germany = ["Berlin", "Frankfurt", "Hannover", "Bonn"];
+                            var countries = document.getElementById("country");
+                            var cities = document.getElementById("city");
+                            var selected = countries.value;
+                            var html = '<option selected="selected">Select City</option>';
+                            if (selected === "1") {
+                                for (var i = 0; i < albania.length; i++) {
+                                    html += '<option value="' + albania[i] + '">' + albania[i] + '</option>';
+                                }
+                            }
+                            else if (selected === "2") {
+                                for (var j = 0; j < kosovo.length; j++) {
+                                    html += '<option value="' + kosovo[j] + '">' + kosovo[j] + '</option>';
+                                }
+                            }
+                            else if (selected === "3") {
+                                for (var k = 0; k < germany.length; k++) {
+                                    html += '<option value="' + germany[k] + '">' + germany[k] + '</option>';
+                                }
+                            }
+                            cities.innerHTML = html;
+                        }
+                    </script>
+                </body>
+            </html>
+              </form>
+

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketWebUI", "TicketWebUI\TicketWebUI.csproj", "{7426C35E-D1D5-49AF-950A-58868FD51B12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketReviewApp", "..\TicketReviewApp\TicketReviewApp.csproj", "{68596BBE-B9D1-43EF-B212-64297A056EC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7426C35E-D1D5-49AF-950A-58868FD51B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7426C35E-D1D5-49AF-950A-58868FD51B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7426C35E-D1D5-49AF-950A-58868FD51B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7426C35E-D1D5-49AF-950A-58868FD51B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68596BBE-B9D1-43EF-B212-64297A056EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68596BBE-B9D1-43EF-B212-64297A056EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68596BBE-B9D1-43EF-B212-64297A056EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68596BBE-B9D1-43EF-B212-64297A056EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D90EE6F-A11C-4DBE-81B2-238D0A7E182C}
+	EndGlobalSection
+EndGlobal
